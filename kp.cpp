@@ -18,6 +18,12 @@ int main(int argc, char* argv[]){
 		cout<<"Error"<<endl;
 		return 1;
 	}
+	if(f2.is_open())
+		cout<<"OK"<<endl;
+	else{
+		cout<<"Error"<<endl;
+		return 1;
+	}
 
 	std::string s;
 	std::getline(f,s);
@@ -29,6 +35,7 @@ int main(int argc, char* argv[]){
 	f2<<s;
 
 	f.close();
+	f2.close();
 
 	return 0;
 }
